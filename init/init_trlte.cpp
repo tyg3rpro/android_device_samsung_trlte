@@ -32,12 +32,15 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
+
 #include "property_service.h"
+#include "vendor_init.h"
 #include "log.h"
-#include "util.h"
 
 #include "init_apq8084.h"
+
+using android::base::GetProperty;
 
 void gsm_properties()
 {
@@ -62,11 +65,11 @@ void cdma_properties(char const *operator_alpha,
 
 void init_target_properties()
 {
-    std::string platform = property_get("ro.board.platform");
+    std::string platform = GetProperty("ro.board.platform", "");
     if (platform != ANDROID_TARGET)
         return;
 
-    std::string bootloader = property_get("ro.bootloader");
+    std::string bootloader = GetProperty("ro.bootloader", "");
 
     if (bootloader.find("N910F") == 0) {
         /* trltexx */
@@ -125,9 +128,9 @@ void init_target_properties()
         property_override("ro.product.name", "trltecan");
         gsm_properties();
     } else {
-        ERROR("Setting product info FAILED\n");
+        gsm_properties();
     }
 
-    std::string device = property_get("ro.product.device");
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
+    std::string device = GetProperty("ro.product.device", "");
+    LOG(INFO) << "Found bootloader id " << bootloader << " setting build properties for " << device << " device" << std::endl;
 }

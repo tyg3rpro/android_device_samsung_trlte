@@ -73,14 +73,16 @@ void init_target_properties()
         property_override("ro.build.fingerprint", "samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXS1DQE1:user/release-keys");
         property_override("ro.build.description", "trltexx-user 6.0.1 MMB29M N910FXXS1DQE1 release-keys");
         property_override("ro.product.model", "SM-N910F");
-        property_override("ro.product.device", "trltexx");
+        property_override("ro.product.device", "trlte");
+        property_override("ro.product.name", "trltexx");
         gsm_properties();
     } else if (bootloader.find("N910G") == 0) {
         /* trltedt */
         property_override("ro.build.fingerprint", "samsung/trltedt/trlte:6.0.1/MMB29M/N910GDTS1DQE1:user/release-keys");
         property_override("ro.build.description", "trltedt-user 6.0.1 MMB29M N910GDTS1DQE1 release-keys");
         property_override("ro.product.model", "SM-N910G");
-        property_override("ro.product.device", "trltedt");
+        property_override("ro.product.device", "trlte");
+        property_override("ro.product.name", "trltedt");
         gsm_properties();
     } else if (bootloader.find("N910R4") == 0) {
         /* trlteusc */
@@ -88,6 +90,7 @@ void init_target_properties()
         property_override("ro.build.description", "trlteusc-user 6.0.1 MMB29M N910R4TYS1CQC1 release-keys");
         property_override("ro.product.model", "SM-N910R4");
         property_override("ro.product.device", "trlteusc");
+        property_override("ro.product.name", "trlteusc");
         cdma_properties("U.S. Cellular", "311580", "0");
     } else if (bootloader.find("N910P") == 0) {
         /* trltespr */
@@ -95,6 +98,7 @@ void init_target_properties()
         property_override("ro.build.description", "trltespr-user 6.0.1 MMB29M N910PVPS4DQC1 release-keys");
         property_override("ro.product.model", "SM-N910P");
         property_override("ro.product.device", "trltespr");
+        property_override("ro.product.name", "trltespr");
         cdma_properties("Sprint", "310120", "1");
     } else if (bootloader.find("N910T") == 0) {
         /* trltetmo */
@@ -102,6 +106,7 @@ void init_target_properties()
         property_override("ro.build.description", "trltetmo-user 6.0.1 MMB29M N910TUVS2EQE2 release-keys");
         property_override("ro.product.model", "SM-N910T");
         property_override("ro.product.device", "trltetmo");
+        property_override("ro.product.name", "trltetmo");
         gsm_properties();
     } else if (bootloader.find("N910V") == 0) {
         /* trltevzw */
@@ -109,6 +114,7 @@ void init_target_properties()
         property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRS2CQE1 release-keys");
         property_override("ro.product.model", "SM-N910V");
         property_override("ro.product.device", "trltevzw");
+        property_override("ro.product.name", "trltevzw");
         cdma_properties("Verizon", "311480", "0");
     } else if (bootloader.find("N910W8") == 0) {
         /* trltecan */
@@ -116,6 +122,7 @@ void init_target_properties()
         property_override("ro.build.description", "trltecan-user 6.0.1 MMB29M N910W8VLS1DQD1 release-keys");
         property_override("ro.product.model", "SM-N910W8");
         property_override("ro.product.device", "trltecan");
+        property_override("ro.product.name", "trltecan");
         gsm_properties();
     } else {
         ERROR("Setting product info FAILED\n");

@@ -26,7 +26,8 @@ TARGET_FIXUP_PREVIEW := true
 TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_eur_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_trlte
+TARGET_INIT_VENDOR_LIB := libinit_apq8084
+TARGET_LIBINIT_APQ8084_DEFINES_FILE := device/samsung/trlte/init/init_trlte.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # Releasetools

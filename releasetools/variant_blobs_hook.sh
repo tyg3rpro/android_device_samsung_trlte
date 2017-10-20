@@ -14,18 +14,12 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/trlte/trlte-vendor.mk)
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/trlte/overlay
-
-# Variant blobs script
-PRODUCT_COPY_FILES += \
-    device/samsung/trlte/releasetools/variant_blobs_hook.sh:install/bin/variant_blobs_hook.sh \
-    device/samsung/trlte-common/releasetools/variant_blobs.sh:install/bin/variant_blobs.sh
-
-# common trlte
-$(call inherit-product, device/samsung/trlte-common/trlte.mk)
+case $BOOTLOADER in
+  N910F*)  VARIANT="xx"  ;;
+  N910G*)  VARIANT="xx"  ;;
+  N910R4*) VARIANT="spr" ;;
+  N910P*)  VARIANT="spr" ;;
+  N910T*)  VARIANT="tmo" ;;
+  N910V*)  VARIANT="vzw" ;;
+  N910W8*) VARIANT="tmo" ;;
+esac

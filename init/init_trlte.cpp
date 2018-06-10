@@ -74,20 +74,28 @@ void init_target_properties()
 
     if (bootloader.find("N910F") == 0) {
         /* trltexx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXS1DQH9:user/release-keys");
-        property_override("ro.build.description", "trltexx-user 6.0.1 MMB29M N910FXXS1DQH9 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXU1DRD1:user/release-keys");
+        property_override("ro.build.description", "trltexx-user 6.0.1 MMB29M N910FXXU1DRD1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910F");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "trlte");
         property_override_dual("ro.product.name", "ro.vendor.product.name", "trltexx");
         gsm_properties();
     } else if (bootloader.find("N910G") == 0) {
         /* trltedt */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltedt/trlte:6.0.1/MMB29M/N910GDTS1DQH3:user/release-keys");
-        property_override("ro.build.description", "trltedt-user 6.0.1 MMB29M N910GDTS1DQH3 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltedt/trlte:6.0.1/MMB29M/N910GDTU1DRD1:user/release-keys");
+        property_override("ro.build.description", "trltedt-user 6.0.1 MMB29M N910GDTU1DRD1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910G");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "trlte");
         property_override_dual("ro.product.name", "ro.vendor.product.name", "trltedt");
         gsm_properties();
+    } else if (bootloader.find("N910P") == 0) {
+        /* trltespr */
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltespr/trltespr:6.0.1/MMB29M/N910PVPU5DQI5:user/release-keys");
+        property_override("ro.build.description", "trltespr-user 6.0.1 MMB29M N910PVPU5DQI5 release-keys");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910P");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "trltespr");
+        property_override_dual("ro.product.name", "ro.vendor.product.name", "trltespr");
+        cdma_properties("Sprint", "310120", "1");
     } else if (bootloader.find("N910R4") == 0) {
         /* trlteusc */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trlteusc/trlteusc:6.0.1/MMB29M/N910R4TYS1CQC1:user/release-keys");
@@ -96,34 +104,26 @@ void init_target_properties()
         property_override_dual("ro.product.device", "ro.vendor.product.device", "trlteusc");
         property_override_dual("ro.product.name", "ro.vendor.product.name", "trlteusc");
         cdma_properties("U.S. Cellular", "311580", "0");
-    } else if (bootloader.find("N910P") == 0) {
-        /* trltespr */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltespr/trltespr:6.0.1/MMB29M/N910PVPS4DQG1:user/release-keys");
-        property_override("ro.build.description", "trltespr-user 6.0.1 MMB29M N910PVPS4DQG1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910P");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "trltespr");
-        property_override_dual("ro.product.name", "ro.vendor.product.name", "trltespr");
-        cdma_properties("Sprint", "310120", "1");
     } else if (bootloader.find("N910T") == 0) {
         /* trltetmo */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltetmo/trltetmo:6.0.1/MMB29M/N910TUVS2EQG1:user/release-keys");
-        property_override("ro.build.description", "trltetmo-user 6.0.1 MMB29M N910TUVS2EQG1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltetmo/trltetmo:6.0.1/MMB29M/N910TUVU2EQI2:user/release-keys");
+        property_override("ro.build.description", "trltetmo-user 6.0.1 MMB29M N910TUVU2EQI2 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910T");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "trltetmo");
         property_override_dual("ro.product.name", "ro.vendor.product.name", "trltetmo");
         gsm_properties();
     } else if (bootloader.find("N910V") == 0) {
         /* trltevzw */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Verizon/trltevzw/trltevzw:6.0.1/MMB29M/N910VVRU2CQF2:user/release-keys");
-        property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRU2CQF2 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Verizon/trltevzw/trltevzw:6.0.1/MMB29M/N910VVRU2CQL1:user/release-keys");
+        property_override("ro.build.description", "trltevzw-user 6.0.1 MMB29M N910VVRU2CQL1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910V");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "trltevzw");
         property_override_dual("ro.product.name", "ro.vendor.product.name", "trltevzw");
         cdma_properties("Verizon", "311480", "0");
     } else if (bootloader.find("N910W8") == 0) {
         /* trltecan */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltecan/trltecan:6.0.1/MMB29M/N910W8VLS1DQG1:user/release-keys");
-        property_override("ro.build.description", "trltecan-user 6.0.1 MMB29M N910W8VLS1DQG1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltecan/trltecan:6.0.1/MMB29M/N910W8VLS1DQH2:user/release-keys");
+        property_override("ro.build.description", "trltecan-user 6.0.1 MMB29M N910W8VLS1DQH2 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910W8");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "trltecan");
         property_override_dual("ro.product.name", "ro.vendor.product.name", "trltecan");

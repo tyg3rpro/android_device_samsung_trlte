@@ -5,7 +5,6 @@ vendor/lib/libconfigdb.so:blobs/spr/vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so:blobs/spr/vendor/lib/libdiag.so
 vendor/lib/libdsutils.so:blobs/spr/vendor/lib/libdsutils.so
 vendor/lib/libidl.so:blobs/spr/vendor/lib/libidl.so
-vendor/lib/libnetmgr.so:blobs/spr/vendor/lib/libnetmgr.so
 vendor/lib/libqcci_legacy.so:blobs/spr/vendor/lib/libqcci_legacy.so
 vendor/lib/libqmi.so:blobs/spr/vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so:blobs/spr/vendor/lib/libqmi_cci.so
@@ -19,7 +18,6 @@ bin/efsks:blobs/spr/bin/efsks
 bin/ks:blobs/spr/bin/ks
 bin/mdm_helper:blobs/spr/bin/mdm_helper
 bin/mdm_helper_proxy:blobs/spr/bin/mdm_helper_proxy
-bin/netmgrd:blobs/spr/bin/netmgrd
 bin/qcks:blobs/spr/bin/qcks
 bin/qmuxd:blobs/spr/bin/qmuxd
 lib/libsec-ril.so:blobs/spr/lib/libsec-ril.so

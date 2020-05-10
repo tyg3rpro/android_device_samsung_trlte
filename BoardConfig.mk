@@ -77,5 +77,3 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_trlte
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/init_trlte.cpp
 
-# Oreo
-TW_NO_LEGACY_PROPS := true

@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2014 The CyanogenMod Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,20 +18,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/trlte/trlte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/trltexx/trltexx-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/trlte/overlay
-
-# Variant blobs script
-PRODUCT_COPY_FILES += \
-    device/samsung/trlte/releasetools/variant_blobs_hook.sh:install/bin/variant_blobs_hook.sh \
-    device/samsung/trlte-common/releasetools/variant_blobs.sh:install/bin/variant_blobs.sh
-
-# mixer_paths.xml workaround
-PRODUCT_COPY_FILES += \
-    device/samsung/trlte/releasetools/mixer_paths_eur.sh:install/bin/mixer_paths_eur.sh \
-    device/samsung/trlte-common/audio/mixer_paths_eur.xml:install/bin/mixer_paths_eur.xml
+DEVICE_PACKAGE_OVERLAYS += device/samsung/trltexx/overlay
 
 # common trlte
 $(call inherit-product, device/samsung/trlte-common/trlte.mk)

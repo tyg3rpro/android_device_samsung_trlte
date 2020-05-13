@@ -25,4 +25,4 @@ PRODUCT_NAME := full_trltexx
 PRODUCT_DEVICE := trltexx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
-PRODUCT_MODEL := Galaxy Note 4
+PRODUCT_MODEL := Galaxy Note 4 (SM-N910F,Fx,G)
